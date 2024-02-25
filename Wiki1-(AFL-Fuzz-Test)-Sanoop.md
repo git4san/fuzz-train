@@ -95,7 +95,7 @@ $ sudo apt-get install libmpc-dev
 
 ```sh
 ## Fuzz readelf with afl-fuzz
-$ echo core > /proc/sys/kernel/core_pattern
+$ echo core | sudo tee /proc/sys/kernel/core_pattern
 $ mkdir afl_in afl_out
 $ cp /bin/ps afl_in/ (legit ELF file (/bin/ps command) - AFL will use it as a base template
 $ afl-fuzz -i afl_in -o afl_out ./binutils/readelf -a @@
