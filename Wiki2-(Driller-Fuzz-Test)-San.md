@@ -16,7 +16,7 @@ $ gcc -o buggy buggy.c
 
 ### The purpose of using gcc is to compile the program with the necessary source code instrumentation for QEMU to perform dynamic analysis during runtime. This instrumentation is different from AFL's native instrumentation, which is applied by afl-gcc during compilation for AFL's fuzzing process.
 
-### Once the program is compiled with gcc, AFL's QEMU mode (afl-qemu-trace) can then instrument the binary at runtime to track code coverage and guide the fuzzing process. This allows AFL to fuzz binaries that were compiled without AFL instrumentation, making it useful for fuzzing closed-source or third-party applicat## ions
+### Once the program is compiled with gcc, AFL's QEMU mode (afl-qemu-trace) can then instrument the binary at runtime to track code coverage and guide the fuzzing process. This allows AFL to fuzz binaries that were compiled without AFL instrumentation, making it useful for fuzzing closed-source or third-party applications
 
 ## Check the compiled
 ```sh
